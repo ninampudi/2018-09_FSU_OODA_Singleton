@@ -9,14 +9,20 @@ import org.junit.jupiter.api.Test;
  * BaseSingletonTest will do a basic test of the base singleton
  * 
  * @author orlando
+ * @author Navya Inampudi
  */
 class SubClassSingletonTest {
 	
 	private SubClassSingleton singleton;
-
+	
+	/**
+	 * 
+	 * This tests the instance creation for the class SubClassSingleton.
+	 * Added the type casting to fix the instance creation from the sub class.
+	 */
 	@BeforeEach
 	void setUp() throws Exception {
-		singleton = SubClassSingleton.getInstance();
+		singleton = (SubClassSingleton) SubClassSingleton.getInstance();
 	}
 
 	@Test

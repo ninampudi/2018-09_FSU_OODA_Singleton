@@ -4,6 +4,8 @@
  * Assignment: HW 9 - Singleton Problems
  * 
  * Date: 2017-11-11
+ * 
+ * @author Navya Inampudi
  */
 package HW9.edu.fsu.csc7400.patterns.singleton;
 
@@ -12,6 +14,7 @@ package HW9.edu.fsu.csc7400.patterns.singleton;
  * and subclassing work
  * 
  * @author orlando
+ * @author ninampudi
  */
 public class BaseSingleton {	
 	/**
@@ -59,7 +62,9 @@ public class BaseSingleton {
 	
 	/**
 	 * Private constructor for singleton
+	 * Changed the access modifier from Private to Protected. So, that BaseSingleton class can be extended.
+	 * Otherwise this constructor will not be visible in the child classes.
 	 */
-	private BaseSingleton() {
+	protected BaseSingleton() {
 	}
 }
